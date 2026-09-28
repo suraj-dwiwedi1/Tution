@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bright Future Coaching</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 70px;
+            background: #172554;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+        
+        .logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+        
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 600px;
+            background: linear-gradient(135deg, #172554, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 60px 7%;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #e0f2fe;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #082f49;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        /* SECTION */
+        section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* COURSES */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .course-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .course-card h3 {
+            color: #172554;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .course-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .course-card .course-btn {
+            display: inline-block;
+            margin-top: 20px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FEATURES */
+        .features {
+            background: #eaf3ff;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            background: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+        }
+
+        .feature-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* TEACHERS */
+        .teachers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .teacher-card {
+            background: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .teacher-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #dbeafe;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+        }
+        
+        //=================
+        //Add photo 
+        //=================
+        
+        .teacher-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+.teacher-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    
+        .teacher-card h3 {
+            color: #172554;
+            margin-bottom: 8px;
+        }
+
+        .teacher-card p {
+            color: #64748b;
+        }
+        
+        
+        /* PROFESSIONAL TEACHERS SECTION */
+
+.teachers-section {
+    background: #f8fafc;
+}
+
+.small-title {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.teachers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.teacher-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.14);
+}
+
+.teacher-image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #dbeafe;
+}
+
+.teacher-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.teacher-card:hover .teacher-image img {
+    transform: scale(1.05);
+}
+
+.teacher-info {
+    padding: 25px;
+}
+
+.teacher-info h3 {
+    font-size: 23px;
+    color: #172554;
+    margin-bottom: 7px;
+}
+
+.subject {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.experience {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.teacher-description {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.teacher-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.teacher-tags span {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .teachers {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .teachers {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-image {
+        height: 280px;
+    }
+
+}
+
+        /* BATCH */
+        .batch-section {
+            background: #172554;
+            color: white;
+        }
+
+        .batch-section .section-title h2 {
+            color: white;
+        }
+
+        .batch-section .section-title p {
+            color: #cbd5e1;
+        }
+
+        .batch-table {
+            max-width: 900px;
+            margin: auto;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 17px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* REVIEWS */
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .review h4 {
+            color: #172554;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #eaf3ff;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contact-info h3 {
+            font-size: 25px;
+            color: #172554;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #475569;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            color: #94a3b8;
+            margin-top: 8px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .courses,
+            .teachers,
+            .reviews {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                height: auto;
+                padding: 18px 5%;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 500px;
+                padding: 50px 5%;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .courses,
+            .teachers,
+            .reviews,
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .btn {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+    <img src="logo.png" alt="Bright Future Coaching Logo">
+</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#teachers">Teachers</a></li>
+            <li><a href="#batches">Batches</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Learn Today,
+                <span>Lead Tomorrow.</span>
+            </h1>
+
+            <p>
+                Welcome to Bright Future Coaching — a place where
+                students learn, grow and prepare themselves for
+                academic and competitive success.
+            </p>
+
+            <a href="#courses" class="btn">
+                Explore Courses
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Join Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- COURSES -->
+    <section id="courses">
+
+        <div class="section-title">
+            <h2>Our Courses</h2>
+            <p>Choose the course that matches your goal.</p>
+        </div>
+
+        <div class="courses">
+
+            <div class="course-card">
+                <div class="course-icon">📚</div>
+
+                <h3> Classes 6 to 10 Foundation</h3>
+
+                <p>
+                    Complete academic preparation for school
+                    students with regular tests and doubt sessions.
+                </p>
+
+                <a href="#contact" class="course-btn">
+                    Enquire Now →
+                </a>
+            </div>
+
+
+            
+
+
+            <div class="course-card">
+                <div class="course-icon">💻</div>
+
+                <h3>Computer Courses</h3>
+
+                <p>
+                    Learn computer fundamentals, programming,
+                    web development and other essential skills.
+                </p>
+
+                <a href="#contact" class="course-btn">
+                    Enquire Now →
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section class="features">
+
+        <div class="section-title">
+            <h2>Why Choose Us?</h2>
+            <p>Everything you need for better learning.</p>
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3>Expert Teachers</h3>
+                <p>
+                    Experienced teachers focused on student learning.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📝</div>
+                <h3>Regular Tests</h3>
+                <p>
+                    Regular tests to track your preparation.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📖</div>
+                <h3>Study Material</h3>
+                <p>
+                    Well-organized notes and practice material.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Doubt Support</h3>
+                <p>
+                    Ask questions and clear your doubts regularly.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEACHERS -->
+    <!-- PROFESSIONAL TEACHERS SECTION -->
+<section class="teachers-section" id="teachers">
+
+    <div class="section-title">
+        <span class="small-title">OUR FACULTY</span>
+        <h2>Meet Our Expert Teachers</h2>
+        <p>
+            Learn from experienced educators dedicated to
+            helping students achieve their goals.
+        </p>
+    </div>
+
+    <div class="teachers">
+
+        <!-- Teacher 1 -->
+        <div class="teacher-card">
+
+            <div class="teacher-image">
+                <img src="teacher1.jpg" alt="Suraj Dwiwedi">
+            </div>
+
+            <div class="teacher-info">
+
+                <h3>Suraj Dwiwedi</h3>
+
+                <p class="subject">
+                    Mathematics Faculty
+                </p>
+
+                <p class="experience">
+                    10+ Years Experience
+                </p>
+
+                <p class="teacher-description">
+                    Specializes in Mathematics and helps students
+                    understand difficult concepts through simple
+                    explanations and practical examples.
+                </p>
+
+                <div class="teacher-tags">
+                    <span>Mathematics</span>
+                    <span>School Classes</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Teacher 2 -->
+        <div class="teacher-card">
+
+            <div class="teacher-image">
+                <img src="teacher2.jpg" alt="Saurabh Shekhar">
+            </div>
+
+            <div class="teacher-info">
+
+                <h3>Saurabh Shekhar</h3>
+
+                <p class="subject">
+                    Science Faculty
+                </p>
+
+                <p class="experience">
+                    8+ Years Experience
+                </p>
+
+                <p class="teacher-description">
+                    Passionate about making Science interesting
+                    and easy to understand through examples,
+                    diagrams and interactive learning.
+                </p>
+
+                <div class="teacher-tags">
+                    <span>Science</span>
+                    <span>Biology</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Teacher 3 -->
+        <div class="teacher-card">
+
+            <div class="teacher-image">
+                <img src="teacher3.jpg" alt="Tushar Goswami">
+            </div>
+
+            <div class="teacher-info">
+
+                <h3>Tushar Goswami</h3>
+
+                <p class="subject">
+                    Computer Science Faculty
+                </p>
+
+                <p class="experience">
+                    7+ Years Experience
+                </p>
+
+                <p class="teacher-description">
+                    Teaches programming, computer fundamentals
+                    and practical computer skills with
+                    student-friendly methods.
+                </p>
+
+                <div class="teacher-tags">
+                    <span>Computer Science</span>
+                    <span>Programming</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- BATCHES -->
+    <section class="batch-section" id="batches">
+
+        <div class="section-title">
+            <h2>Upcoming Batches</h2>
+            <p>Check our latest batch timings.</p>
+        </div>
+
+        <div class="batch-table">
+
+            <table>
+
+                <tr>
+                    <th>Course</th>
+                    <th>Class</th>
+                    <th>Time</th>
+                    <th>Days</th>
+                </tr>
+
+                <tr>
+                    <td>School Classes</td>
+                    <td>Class 6-10</td>
+                    <td>4:00PM - 8:00PM</td>
+                    <td>Mon - Fri</td>
+                </tr>
+
+                <tr>
+                    <td>Computer Science</td>
+                    <td>Class 10</td>
+                    <td>5:30 PM</td>
+                    <td>Mon - Sat</td>
+                </tr>
+
+                
+                   
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- REVIEWS -->
+    <section>
+
+        <div class="section-title">
+            <h2>Student Reviews</h2>
+            <p>What our students say.</p>
+        </div>
+
+        <div class="reviews">
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The teachers explain every topic very clearly.
+                    Regular tests helped me improve my preparation."
+                </p>
+
+                <h4>— Aman</h4>
+
+            </div>
+
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The study material and doubt sessions are
+                    very helpful."
+                </p>
+
+                <h4>— Neha</h4>
+
+            </div>
+
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "A friendly learning environment with
+                    supportive teachers."
+                </p>
+
+                <h4>— Rohan</h4>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+            <h2>Student Admission</h2>
+<p>Fill in your details to enquire about admission.</p>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Bright Future Coaching</h3>
+
+                <p>📍 Patna, Bihar, India</p>
+
+                <p>📞 +91 98765 43210</p>
+
+                <p>📧 brightfuture@example.com</p>
+
+                <p>
+                    Visit our coaching centre or contact us
+                    to know about courses and batches.
+                </p>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <form <input
+    type="text"
+    placeholder="Student Full Name"
+    required
+>
+
+<input
+    type="text"
+    placeholder="Father / Guardian Name"
+    required
+>
+
+<input
+    type="tel"
+    placeholder="Mobile Number"
+    required
+>
+
+<input
+    type="email"
+    placeholder="Email Address"
+>
+
+<select required>
+    <option value="">Select Class</option>
+    <option>Class 6</option>
+    <option>Class 7</option>
+    <option>Class 8</option>
+    <option>Class 9</option>
+    <option>Class 10</option>
+    <option>Class 11</option>
+    <option>Class 12</option>
+    <option>Competitive Exam</option>
+</select>
+
+<select required>
+    <option value="">Select Course</option>
+    <option>School Classes</option>
+    <option>Competitive Exams</option>
+    <option>Computer Courses</option>
+</select>
+
+<textarea
+    placeholder="Address"
+></textarea>
+
+<button
+    type="submit"
+    class="btn submit-btn"
+>
+    Submit Admission Form
+</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>Bright Future Coaching</h3>
+
+        <p>
+            Learn • Practice • Improve • Succeed
+        </p>
+
+        <p>
+            © 2026 Bright Future Coaching. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function submitForm(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Thank you! Your enquiry has been submitted."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
